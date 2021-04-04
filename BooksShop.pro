@@ -1,3 +1,7 @@
+QT += quick
+CONFIG += c++14
+QT += sql
+
 # allows to add DEPLOYMENTFOLDERS and links to the Felgo library and QtCreator auto-completion
 CONFIG += felgo
 
@@ -41,6 +45,7 @@ DEPLOYMENTFOLDERS += assetsFolder
 SOURCES += main.cpp \
     administrator.cpp \
     customer.cpp \
+    database.cpp \
     user.cpp
 
 
@@ -69,4 +74,5 @@ DISTFILES += \
 HEADERS += \
     administrator.h \
     customer.h \
+    database.h \
     user.h

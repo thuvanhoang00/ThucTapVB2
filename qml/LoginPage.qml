@@ -49,17 +49,36 @@ Page {
         columns: 2
 
         // headline
-        AppText {
-            Layout.topMargin: dp(8)
-            Layout.bottomMargin: dp(12)
+        Rectangle {
+            Layout.topMargin: dp(5)
+            Layout.bottomMargin: dp(30)
             Layout.columnSpan: 2
-            Layout.alignment: Qt.AlignHCenter
-            text: "Login"
+            AppText{
+                id: txtLogin
+                Layout.topMargin: dp(8)
+                Layout.bottomMargin: dp(12)
+                Layout.columnSpan: 2
+    //            Layout.alignment: Qt.AlignLeft
+                anchors.left: parent.left
+                anchors.leftMargin: dp(80)
+                text: "Login"
+            }
+
+            AppText {
+                id: txtRegister
+                Layout.topMargin: dp(8)
+                Layout.bottomMargin: dp(12)
+                Layout.columnSpan: 2
+    //            Layout.alignment: Qt.AlignLeft
+                anchors.left: parent.left
+                anchors.leftMargin: dp(160)
+                text: "Register"
+            }
         }
 
         // email text and field
         AppText {
-            text: qsTr("E-mail")
+            text: qsTr("E-mail/Username")
             font.pixelSize: sp(12)
         }
 
@@ -96,6 +115,7 @@ Page {
 
             // buttons
             AppButton {
+                id: loginButton
                 text: qsTr("Login")
                 flat: false
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -109,6 +129,7 @@ Page {
             }
 
             AppButton {
+                id: registerButton
                 text: qsTr("No account yet? Register now")
                 flat: true
                 anchors.horizontalCenter: parent.horizontalCenter
